@@ -1,0 +1,392 @@
+@use postcss-preset-env {
+   stage: 0;
+ }
+@import url('https://fonts.googleapis.com/css?family=Lato');
+ 
+ /* config.css */
+ 
+ /* 문서트리의 루트 요소, 
+   html선택자보다는 root가 명시도가 더 낮다 
+   전역 css변수 선어에 유용*/
+ :root {
+   --baseColor: #606468;
+ }
+ 
+ /* helpers/align.css */
+ 
+ .align { /* body태그 */
+   display: grid;
+   /* flex는 한 방향 레이아웃 시스템(1차원)
+       grid는 두 방향(가로-세로)레이아웃 시스템(2차원) */
+   place-items: center;
+ }
+ 
+ .grid { /* div class명 */
+   inline-size: 90%;
+   margin-inline: auto;
+   max-inline-size: 20rem;
+ }
+ 
+ /* helpers/hidden.css */
+ 
+ .hidden {
+   border: 0;
+   clip: rect(0 0 0 0);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+   width: 1px;
+ }
+ 
+ /* helpers/icon.css */
+ 
+ :root {
+   --iconFill: var(--baseColor);
+ }
+ .icons {
+   display: none;
+ }
+ .icon {
+   block-size: 1em;
+   display: inline-block;
+   fill: var(--iconFill);
+   inline-size: 1em;
+   vertical-align: middle;
+ }
+ 
+ /* layout/base.css */
+ 
+ :root {
+   --htmlFontSize: 100%;
+ 
+   --bodyBackgroundColor: #1a1a1a;
+   --bodyColor: var(--baseColor);
+   --bodyFontFamily: "Open Sans";
+   --bodyFontFamilyFallback: sans-serif;
+   --bodyFontSize: 0.875rem;
+   --bodyFontWeight: 400;
+   --bodyLineHeight: 1.5;
+ }
+ 
+ * {
+   box-sizing: inherit;
+ }
+ 
+ html {
+   box-sizing: border-box;
+   font-size: var(--htmlFontSize);
+ }
+ 
+ body {
+   background-color: var(--bodyBackgroundColor);
+   color: var(--bodyColor);
+   font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+   font-size: var(--bodyFontSize);
+   font-weight: var(--bodyFontWeight);
+   line-height: var(--bodyLineHeight);
+   margin: 0;
+   min-block-size: 100vh;
+ }
+ 
+ /* modules/anchor.css */
+ 
+ :root {
+   --anchorColor: #eee;
+ }
+ 
+ a {
+   color: var(--anchorColor);
+   outline: 0;
+   text-decoration: none;
+ }
+ 
+ a:focus,
+ a:hover {
+   text-decoration: underline;
+ }
+ 
+ /* modules/form.css */
+ 
+ :root {
+   --formGap: 0.875rem;
+ }
+ 
+ input {
+   background-image: none;
+   border: 0;
+   color: inherit;
+   font: inherit;
+   margin: 0;
+   outline: 0;
+   padding: 0;
+   transition: background-color 0.3s;
+ }
+ 
+ input[type="submit"],
+ input[type="button"] {
+   cursor: pointer;
+ }
+ 
+ .form {
+   display: grid;
+   gap: var(--formGap);
+ }
+ 
+ .form input[type="password"],
+ .form input[type="text"],
+ .form input[type="submit"],
+ .form input[type="button"] {
+   inline-size: 100%;
+ }
+ 
+ .form__field {
+   display: flex;
+ }
+ 
+ .form__input {
+   flex: 1;
+ }
+ 
+ /* modules/login.css */
+ 
+ :root {
+   --loginBorderRadus: 0.25rem;
+   --loginColor: #eee;
+ 
+   --loginInputBackgroundColor: #363636;
+   --loginInputHoverBackgroundColor: #3D3D3D;
+ 
+   --loginLabelBackgroundColor: #212121;
+ 
+   --loginSubmitBackgroundColor: #ffb606;
+   --loginSubmitColor: #1a1a1a;
+   --loginSubmitHoverBackgroundColor: #ffb606;
+
+   --loginButtonBackgroundColor: #ffb606;
+   --loginButtonColor: #1a1a1a;
+   --loginButtonHoverBackgroundColor: #ffb606;
+ }
+ 
+ .login {
+   color: var(--loginColor);
+ }
+ 
+ .login label,
+ .login input[type="text"],
+ .login input[type="password"],
+ .login input[type="submit"],
+ .login input[type="button"] {
+   border-radius: var(--loginBorderRadus);
+   padding: 1rem;
+ }
+ 
+ .login label {
+   background-color: var(--loginLabelBackgroundColor);
+   padding-inline: 1.25rem;
+ }
+ 
+ .login input[type="password"],
+ .login input[type="text"] {
+   background-color: var(--loginInputBackgroundColor);
+   border-bottom-left-radius: 0;
+   border-top-left-radius: 0;
+ }
+ 
+ .login input[type="password"]:focus,
+ .login input[type="password"]:hover,
+ .login input[type="text"]:focus,
+ .login input[type="text"]:hover {
+   background-color: var(--loginInputHoverBackgroundColor);
+ }
+ 
+ .login input[type="submit"],
+ .login input[type="button"] {
+   background-color: var(--loginSubmitBackgroundColor);
+   background-color: var(--loginButtonBackgroundColor);
+   color: var(--loginSubmitColor);
+   color: var(--loginButtonColor);
+   font-weight: 700;
+   text-transform: uppercase;
+ }
+ 
+ .login input[type="submit"]:focus,
+ .login input[type="submit"]:hover,
+ .login input[type="button"]:focus,
+ .login input[type="button"]:hover {
+   background-color: var(--loginSubmitHoverBackgroundColor);
+ }
+ 
+ /* modules/text.css */
+ 
+ p {
+   margin-block: 1.5rem;
+ }
+ 
+ .text--center {
+   text-align: center;
+ }
+
+
+
+/* 체크박스 */
+
+.container {
+  box-sizing: border-box;
+  padding: 25px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+/* Checkmark style starts */
+@-moz-keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 25px;
+  }
+}
+@-webkit-keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 25px;
+  }
+}
+@keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 25px;
+  }
+}
+@keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 60px;
+  }
+}
+@-webkit-keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 60px;
+  }
+}
+@-moz-keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 60px;
+  }
+}
+input[type=checkbox] {
+  display: none;
+}
+
+.check-box {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: 9px solid #121317;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: border-color ease 0.2s;
+  -o-transition: border-color ease 0.2s;
+  -webkit-transition: border-color ease 0.2s;
+  transition: border-color ease 0.2s;
+  cursor: pointer;
+}
+.check-box::before, .check-box::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  height: 0;
+  width: 11px;
+  background-color: #ffb606;
+  display: inline-block;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  border-radius: 5px;
+  content: " ";
+  -webkit-transition: opacity ease 0.5;
+  -moz-transition: opacity ease 0.5;
+  transition: opacity ease 0.5;
+}
+
+#check_manager{
+  background-color: transparent;
+  position: relative;
+  top: -20px;
+}
+
+.check-box::before {
+  top: 25px;
+  left: 21px;
+  box-shadow: 0 0 0 3px #1a1a1a;
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.check-box::after {
+  top: 7px;
+  left: 0px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type=checkbox]:checked + .check-box,
+.check-box.checked {
+  border-color: #ffb606;
+}
+input[type=checkbox]:checked + .check-box::after,
+.check-box.checked::after {
+  height: 25px;
+  -moz-animation: dothabottomcheck 0.2s ease 0s forwards;
+  -o-animation: dothabottomcheck 0.2s ease 0s forwards;
+  -webkit-animation: dothabottomcheck 0.2s ease 0s forwards;
+  animation: dothabottomcheck 0.2s ease 0s forwards;
+}
+input[type=checkbox]:checked + .check-box::before,
+.check-box.checked::before {
+  height: 60px;
+  -moz-animation: dothatopcheck 0.4s ease 0s forwards;
+  -o-animation: dothatopcheck 0.4s ease 0s forwards;
+  -webkit-animation: dothatopcheck 0.4s ease 0s forwards;
+  animation: dothatopcheck 0.4s ease 0s forwards;
+}
+
+
+ 
