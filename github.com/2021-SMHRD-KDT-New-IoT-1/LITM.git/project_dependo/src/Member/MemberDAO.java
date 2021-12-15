@@ -21,12 +21,16 @@ public class MemberDAO {
 	         try {
 	        	 
 	        	 
-	            Class.forName("org.mariadb.jdbc.Driver");
-	           
-	            con = DriverManager.getConnection(
-	                    "jdbc:mariadb://211.48.228.2:3306/dependo",
-	                    "dependo",
-	                    "1234");
+	        	 
+	 			Class.forName("oracle.jdbc.driver.OracleDriver");
+				String db_url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+				String db_id = "campus_a_3_1215";
+				String db_pw = "smhrd3";
+				con = DriverManager.getConnection(db_url, db_id, db_pw);
+
+
+	            
+	
 	            
 	            if( con != null ) {
 	                System.out.println("DB 접속 성공");

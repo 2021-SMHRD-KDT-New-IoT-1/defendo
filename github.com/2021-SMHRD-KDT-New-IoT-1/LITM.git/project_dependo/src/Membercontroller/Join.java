@@ -28,6 +28,9 @@ public class Join extends HttpServlet {
 		String tel = request.getParameter("tel");
 		String dept = request.getParameter("dept");
 		
+		System.out.println(id+"/"+password+"/"+tel+"/"+dept);
+
+		
 		MemberDAO dao= new MemberDAO();
 		
 		int cnt = dao.Join(id, password, name, tel, dept);
