@@ -17,63 +17,98 @@
 
 </head>
 <body>
-<style>
+	<style>
 @font-face {
-    font-family: 'SLEIGothicTTF';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SLEIGothicTTF.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-size: 35px;
+	font-family: 'SLEIGothicTTF';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SLEIGothicTTF.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-size: 35px;
 }
+
 @font-face {
-    font-family: 'Dolbomche_R';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/Dolbomche_R.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Dolbomche_R';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/Dolbomche_R.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
+
 @font-face {
-    font-family: 'SpoqaHanSansNeo-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'SpoqaHanSansNeo-Medium';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Medium.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+table.type11 {
+	border-collapse: separate;
+	border-spacing: 1px;
+	text-align: center;
+	line-height: 1.5;
+	margin: 20px 10px;
+}
+
+table.type11 th {
+	width: 155px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	background: #ce4869;
+}
+
+table.type11 td {
+	width: 280px;
+	padding: 10px;
+	vertical-align: top;
+	border: 2px solid #ffb606;
+	background:#ffffff;
 }
 
 </style>
 
 	<div class="super_container">
-<!-- Header -->
-   <header class="header d-flex flex-row">
-      <div class="header_content d-flex flex-row align-items-center">
-         <!-- Logo -->
-         <div class="logo_container">
-            <div class="logo">
-               <a href="index_after.html">
-               <img src="images/logode.jpg" alt="">
-               </a>
-            </div>
-         </div>
-
-         <!-- Main Navigation -->
-					<nav class="main_nav_container">
-						<div class="main_nav">
-							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="#"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">출결 관리</span></a></li>
-								<li class="main_nav_item"><a href="#"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">마이페이지</span></a></li>
-								
-							</ul>
-						</div>
-					</nav>
-				</div>
-				<div
-					class="header_side d-flex flex-row justify-content-center align-items-center">
-					<!-- <img src="images/phone-call.svg" alt=""> -->
-					<span></span>
+		<!-- Header -->
+		<header class="header d-flex flex-row">
+			<div class="header_content d-flex flex-row align-items-center">
+				<!-- Logo -->
+				<div class="logo_container">
+					<div class="logo">
+						<a href="index_after.html"> <img src="images/logode.jpg"
+							alt="">
+						</a>
+					</div>
 				</div>
 
-				<!-- Hamburger -->
-				<div class="hamburger_container">
-					<i class="fas fa-bars trans_200"></i>
-				</div>
+				<!-- Main Navigation -->
+				<nav class="main_nav_container">
+					<div class="main_nav">
+						<ul class="main_nav_list">
+							<li class="main_nav_item"><a href="#"><span
+									style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size: 18px;">출결
+										관리</span></a></li>
+							<li class="main_nav_item"><a href="#"><span
+									style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size: 18px;">마이페이지</span></a></li>
+
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div
+				class="header_side d-flex flex-row justify-content-center align-items-center">
+				<!-- <img src="images/phone-call.svg" alt=""> -->
+				<span></span>
+			</div>
+
+			<!-- Hamburger -->
+			<div class="hamburger_container">
+				<i class="fas fa-bars trans_200"></i>
+			</div>
 		</header>
 
 		<!-- Menu -->
@@ -144,19 +179,23 @@
 				<div class="row">
 					<div class="col">
 						<div class="buttons_container">
-							<div class="button button_color_1 text-center"><a href="#"><span style="font-family: 'Dolbomche_R' !important; font-size:25px !important;">출근</span></a></div>
-							<div class="button button_line_2 text-center"><a href="#"><span style="font-family: 'Dolbomche_R' !important; font-size:25px !important;"></span></a></div>
-							<div class="button button_color_2 text-center"><a href="#"><span style="font-family: 'Dolbomche_R' !important; font-size:25px !important;">복귀</span></a></div>
-							<div class="button button_line_1 text-center"><a href="#"><span style="font-family: 'Dolbomche_R' !important; font-size:25px !important;"></span></a></div>
+							<table class="type11">
+								<tbody>
+									<tr>
+										<td style="font-family: 'Dolbomche_R' !important; font-size: 25px;border: 2px solid #ffb606;background:#ffb606;"><font color ="#FFFFFF">출근</font></td>
+										<td style="font-family: 'Dolbomche_R' !important; font-size: 25px;"><font color ="black"></font></td>
+										<td style="font-family: 'Dolbomche_R' !important; font-size: 25px; background:#1A1A1A;border: 2px solid black;"><font color ="#FFFFFF">복귀</font></td>
+										<td style="font-family: 'Dolbomche_R' !important; font-size: 25px;"><font color ="black"></font></td>
+									</tr>
+									<tr>
+										<td style="font-family: 'Dolbomche_R' !important; font-size: 25px;border: 2px solid #ffb606;"><font color ="black">외출</font></td>
+										<td style="font-family: 'Dolbomche_R' !important; font-size: 25px;"><font color ="black"></font></td>
+										<td style="font-family: 'Dolbomche_R' !important; font-size: 25px;border: 2px solid black;"><font color ="black">퇴근</font></td>
+										<td style="font-family: 'Dolbomche_R' !important; font-size: 25px;"><font color ="black"></font></td>
+									</tr>
+								</tbody>
+							</table>
 							
-							<div class="button button_line_1 text-center"><a href="#"><span style="font-family: 'Dolbomche_R' !important; font-size:25px !important;">외출</span></a></div>
-							<div class="button button_color_1 text-center"><a href="#"><span style="font-family: 'Dolbomche_R' !important; font-size:25px !important;"></span></a></div>
-							<div class="button button_line_2 text-center"><a href="#"><span style="font-family: 'Dolbomche_R' !important; font-size:25px !important;">퇴근</span></a></div>
-							<div class="button button_color_2 text-center"><a href="#"><span style="font-family: 'Dolbomche_R' !important; font-size:25px !important;"></span></a></div>
-					</div>
-				</div>
-			</div>	
-		</div>
 			<!-- Progress Bars and Accordions -->
 			<div class="pbars_accordions">
 				<div class="container">

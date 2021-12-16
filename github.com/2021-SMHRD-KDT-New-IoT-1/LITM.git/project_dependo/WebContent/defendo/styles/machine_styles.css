@@ -780,7 +780,8 @@ section
 	height: 189px;
 	background: #f8f4f4;
 	border: solid 2px transparent;
-	padding-left: 33px;
+	padding-left:33px;
+	padding-top:33px;
 	margin-bottom: 24px;
 }
 .text_field:focus
