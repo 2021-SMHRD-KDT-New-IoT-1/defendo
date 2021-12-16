@@ -752,7 +752,7 @@ section
 }
 .contact_title
 {
-	font-size: 36px;
+	font-size: 24px;
 	font-weight: 500;
 	color: #1a1a1a;
 }
@@ -780,7 +780,8 @@ section
 	height: 189px;
 	background: #f8f4f4;
 	border: solid 2px transparent;
-	padding-left: 33px;
+	padding-left:33px;
+	padding-top:33px;
 	margin-bottom: 24px;
 }
 .text_field:focus
