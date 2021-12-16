@@ -67,7 +67,7 @@ public class MemberDAO {
 		}
 		
 		
-		public int Join(String id, String password, String name, String tel,String dept) {
+		public int Join(String id, String password, String name, String tel,String dept, String check_manager) {
 		
 			
 			try {
@@ -76,13 +76,14 @@ public class MemberDAO {
 			DBcon();
 
 			// 4. SQLπÆ ¡ÿ∫Ò
-			String sql = "insert into tbl_worker(worker_id, worker_pw, worker_name, worker_phone,worker_dept) values(?,?,?,?,?)";
+			String sql = "insert into tbl_worker(worker_id, worker_pw, worker_name, worker_phone,worker_dept, ADMIN_YESNO) values(?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.setString(2, password);
 			pstmt.setString(3, name);
 			pstmt.setString(4, tel);		
 			pstmt.setString(5, dept);
+			pstmt.setString(6, check_manager);
 			
 			cnt = pstmt.executeUpdate();
 		
@@ -99,6 +100,7 @@ public class MemberDAO {
 			
 		}
 		
+	
 		public void StartTime(String worker_id,String start_time,String att_type) {
 			
 

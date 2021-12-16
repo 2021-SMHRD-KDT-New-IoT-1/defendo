@@ -1,15 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Course - Contact</title>
+<title>Course</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Course Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/Location_responsive.css">
-<link rel="stylesheet" type="text/css" href="styles/Location_styles.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/index_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/index_responsive.css">
 </head>
 <body>
 <style>
@@ -38,38 +43,35 @@
 <div class="super_container">
 
 	<!-- Header -->
-
 	<header class="header d-flex flex-row">
 		<div class="header_content d-flex flex-row align-items-center">
 			<!-- Logo -->
-		<div class="logo_container">
+			  <div class="logo_container">
             <div class="logo">
                <a href="index_after.html">
                <img src="images/logode.jpg" alt="">
                </a>
             </div>
          </div>
+
 			<!-- Main Navigation -->
 			<nav class="main_nav_container">
 				<div class="main_nav">
 					<ul class="main_nav_list">
-						<li class="main_nav_item"><a href="All_Worker.html"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">직원 통합 관리</span></a></li>
-						<li class="main_nav_item"><a href="#"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">직원 위치 확인</span></a></li>
-						<li class="main_nav_item"><a href="machine.html"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">기기등록</span></a></li>
+						<li class="main_nav_item"><a href="Login.html"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">login</span></a></li>
+						<li class="main_nav_item"><a href="JoinPage.html"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">join us</span></a></li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 		<div class="header_side d-flex flex-row justify-content-center align-items-center">
-			<!-- <img src="images/phone-call.svg" alt=""> -->
+			<!-- <img src="" alt=""> -->
 			<span></span>
 		</div>
-
 		<!-- Hamburger -->
 		<div class="hamburger_container">
 			<i class="fas fa-bars trans_200"></i>
 		</div>
-
 	</header>
 	
 	<!-- Menu -->
@@ -84,16 +86,14 @@
 		<div class="menu_inner menu_mm">
 			<div class="menu menu_mm">
 				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="index.html">Home</a></li>
-					<li class="menu_item menu_mm"><a href="#">About us</a></li>
+					<li class="menu_item menu_mm"><a href="#">Home</a></li>
 					<li class="menu_item menu_mm"><a href="courses.html">Courses</a></li>
 					<li class="menu_item menu_mm"><a href="elements.html">Elements</a></li>
 					<li class="menu_item menu_mm"><a href="news.html">News</a></li>
-					<li class="menu_item menu_mm"><a href="#">Contact</a></li>
+					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
 				</ul>
 
 				<!-- Menu Social -->
-				
 				<div class="menu_social_container menu_mm">
 					<ul class="menu_social menu_mm">
 						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
@@ -103,104 +103,58 @@
 						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
 					</ul>
 				</div>
-
 				<div class="menu_copyright menu_mm">Colorlib All rights reserved</div>
 			</div>
-
 		</div>
-
 	</div>
 	
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(images/contact_background.jpg)"></div>
-		</div>
-		<div class="home_content">
-			<h1>Worker Location</h1>
-		</div>
-	</div>
 
-	<!-- Contact -->
-  
-<!-- 	<div class="contact">
-		<div class="container">  -->
-			<!-- Google Map -->
-	<!-- 		<div class="row">
-				<div class="col">
-					<div id="google_map">
-						<div class="map_container">
-							<div id="map"></div>
+		<!-- Hero Slider -->
+		<div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+				
+				<!-- Hero Slide -->
+				<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url(images/slider_background1.jpg)"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<div class="hero_slide_content text-center">
+							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
 						</div>
 					</div>
 				</div>
-			</div>
-
-		</div>
-	</div>  -->
-	
-	<div class="contact">
-	<div class="container">
-	<div class="row">
-	<div class="col">
-	<div id="map" style="width:	1000px;height:750px; "></div>
+				
+				<!-- Hero Slide -->
+				<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url(images/slider_background2.jpg)"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<div class="hero_slide_content text-center">
+							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
+						</div>
+					</div>
 				</div>
+				
+				<!-- Hero Slide -->
+				<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url(images/slider_background3.jpg)"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<div class="hero_slide_content text-center">
+							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
+						</div>
+					</div>
+				</div>
+
 			</div>
 
+			
 		</div>
-	</div> 
-	
-	
+	</div>
 
-	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7a7d85248aa9c8ee0be6cbccffea2057"></script>
-	<script>
-		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-		    mapOption = {
-		        center: new kakao.maps.LatLng(37.566269, 126.976983), // 지도의 중심좌표
-		        level: 2, // 지도의 확대 레벨
-		        mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
-		    }; 
-
-		// 지도를 생성한다 
-		var map = new kakao.maps.Map(mapContainer, mapOption); 
-
-		// 지도에 마커를 생성하고 표시한다
-		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(37.56682, 126.97865), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		});
-		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(37.565861, 126.976661), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		});
+	<div class="hero_boxes">
 		
-
-		// 커스텀 오버레이를 생성하고 지도에 표시한다
-		var customOverlay = new kakao.maps.CustomOverlay({
-			map: map,
-			content: '<div style="padding:0 5px;background:#fff;">김찬욱</div>', 
-			position: new kakao.maps.LatLng(37.56682, 126.97865), // 커스텀 오버레이를 표시할 좌표
-			xAnchor: 0.5, // 컨텐츠의 x 위치
-			yAnchor: 0 // 컨텐츠의 y 위치
-		});
-		// 커스텀 오버레이를 생성하고 지도에 표시한다
-		var customOverlay = new kakao.maps.CustomOverlay({
-			map: map,
-			content: '<div style="padding:0 5px;background:#fff;">전순웅</div>', 
-			position: new kakao.maps.LatLng(37.565861, 126.976661), // 커스텀 오버레이를 표시할 좌표
-			xAnchor: 0.5, // 컨텐츠의 x 위치
-			yAnchor: 0 // 컨텐츠의 y 위치
-		});
-
-	</script>
-
-
-
-
-
-
-
+	</div>
 
 	<!-- Footer -->
 
@@ -224,8 +178,8 @@
 						</div>
 
 						<p class="footer_about_text">
-							앱과 웹을 통한 
-							<br>노동자 통합 안전 관리 시스템
+							�۰� ���� ���� 
+							<br>�뵿�� ���� ���� ���� �ý���
 							<br><h3>defendo</h3>
 						</p>
 
@@ -285,10 +239,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
 <script src="plugins/greensock/animation.gsap.min.js"></script>
 <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
-<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>  -->
 <script src="plugins/easing/easing.js"></script>
-<script src="js/contact_custom.js"></script>
+<script src="js/custom.js"></script>
 
 </body>
 </html>
