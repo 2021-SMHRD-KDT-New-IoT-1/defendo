@@ -1,3 +1,8 @@
+<%@page import="Member.GPSVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Member.SensorDAO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/machine_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/machine_responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/Location_responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/Location_styles.css">
 </head>
 <body>
 <style>
@@ -34,6 +39,7 @@
 }
 
 </style>
+
 <div class="super_container">
 
 	<!-- Header -->
@@ -41,7 +47,7 @@
 	<header class="header d-flex flex-row">
 		<div class="header_content d-flex flex-row align-items-center">
 			<!-- Logo -->
-		 <div class="logo_container">
+		<div class="logo_container">
             <div class="logo">
                <a href="index_after.html">
                <img src="images/logode.jpg" alt="">
@@ -52,9 +58,9 @@
 			<nav class="main_nav_container">
 				<div class="main_nav">
 					<ul class="main_nav_list">
-						<li class="main_nav_item"><a href="All_Worker.html"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">ì§ì› í†µí•© ê´€ë¦¬</span></a></li>
-						<li class="main_nav_item"><a href="Location.html"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">ì§ì› ìœ„ì¹˜ í™•ì¸</span></a></li>
-						<li class="main_nav_item"><a href="#"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">ê¸°ê¸°ë“±ë¡</span></a></li>
+						<li class="main_nav_item"><a href="All_Worker.html"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">Á÷¿ø ÅëÇÕ °ü¸®</span></a></li>
+						<li class="main_nav_item"><a href="#"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">Á÷¿ø À§Ä¡ È®ÀÎ</span></a></li>
+						<li class="main_nav_item"><a href="machine.html"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">±â±âµî·Ï</span></a></li>
 					</ul>
 				</div>
 			</nav>
@@ -62,6 +68,11 @@
 		<div class="header_side d-flex flex-row justify-content-center align-items-center">
 			<!-- <img src="images/phone-call.svg" alt=""> -->
 			<span></span>
+		</div>
+
+		<!-- Hamburger -->
+		<div class="hamburger_container">
+			<i class="fas fa-bars trans_200"></i>
 		</div>
 
 	</header>
@@ -112,51 +123,107 @@
 			<div class="home_background prlx" style="background-image:url(images/contact_background.jpg)"></div>
 		</div>
 		<div class="home_content">
-			<h1>Device Registration</h1>
+			<h1>Worker Location</h1>
 		</div>
 	</div>
 
 	<!-- Contact -->
-
-	<div class="contact">
-		<div class="container">
-			<div class="row">
+  
+<!-- 	<div class="contact">
+		<div class="container">  -->
+			<!-- Google Map -->
+	<!-- 		<div class="row">
 				<div class="col">
-					<!-- Contact Form -->
-					<div class="contact_form">
-
-<<<<<<< HEAD
-=======
-						
-
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-IoT-1/defendo.git
-						<div class="contact_title"><span style="font-family:'SLEIGothicTTF' !important; font-size:40px;">ì•ˆì „ëª¨ ê¸°ê¸° ë“±ë¡</span></div>
-
-						<div class="contact_form_container">
-							<form action="post">
-
-								<input style="font-family: 'Dolbomche_R' !important;" id="contact_form_name" class="input_field contact_form_name" type="text" placeholder="ì•ˆì „ëª¨  ID" required="required" data-error="machine_id is required.">
-								<input style="font-family: 'Dolbomche_R' !important;" id="contact_form_name" class="input_field contact_form_name" type="text" placeholder="ê·¼ë¡œì  ID" required="required" data-error="worker_id is required.">
-								<input style="font-family: 'Dolbomche_R' !important;" id="contact_form_name" class="input_field contact_form_name" type="text" placeholder="ê·¼ë¡œì ì´ë¦„" required="required" data-error="worker_name is required.">
-								<textarea style="font-family: 'Dolbomche_R' !important;" class="text_field contact_form_message" id="contact_form_message"  name="message" placeholder="ê¸°ê¸° íŠ¹ì´ì‚¬í•­" required="required" data-error="Please, write us a message."></textarea>
-								
-								
-								<button style="font-family: 'Dolbomche_R' !important; font-size:25px;" id="contact_send_btn" type="button" class="contact_send_btn trans_200" value="Submit">ë“±ë¡ ì™„ë£Œ</button>
-								<a href="JoinPage.html">íšŒì›ê°€ì…</a> 
-								<!-- <button id="contact_send_btn" type="button" class="contact_send_btn trans_200" value="Submit">ê¸°ê¸° ìˆ˜ì •</button> -->
-
-
-							</form>
+					<div id="google_map">
+						<div class="map_container">
+							<div id="map"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 
+		</div>
+	</div>  -->
+	
+	<div class="contact">
+	<div class="container">
+	<div class="row">
+	<div class="col">
+	<div id="map" style="width:	1000px;height:750px; "></div>
+				</div>
+			</div>
 
 		</div>
-	</div>
+	</div> 
+	
+	
+
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7a7d85248aa9c8ee0be6cbccffea2057"></script>
+	<script>
+	
+		<% SensorDAO Sdao = new SensorDAO();
+		   ArrayList<GPSVO> gpsal = Sdao.Gps();
+		%>
+	
+		var mapContainer = document.getElementById('map'), // Áöµµ¸¦ Ç¥½ÃÇÒ div 
+		    mapOption = {
+		        center: new kakao.maps.LatLng(35.149967, 126.919945), // ÁöµµÀÇ Áß½ÉÁÂÇ¥
+		        level: 2, // ÁöµµÀÇ È®´ë ·¹º§
+		        mapTypeId : kakao.maps.MapTypeId.ROADMAP // ÁöµµÁ¾·ù
+		    }; 
+
+		// Áöµµ¸¦ »ı¼ºÇÑ´Ù 
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+		
+	<% for(int i=0; i<gpsal.size(); i++){ %>
+			
+			
+			// Áöµµ¿¡ ¸¶Ä¿¸¦ »ı¼ºÇÏ°í Ç¥½ÃÇÑ´Ù
+			var marker = new kakao.maps.Marker({
+			    position: new kakao.maps.LatLng(<%=gpsal.get(i).getLatitude()%>,<%=gpsal.get(i).getLongitude()%> ), // ¸¶Ä¿ÀÇ ÁÂÇ¥
+			    map: map // ¸¶Ä¿¸¦ Ç¥½ÃÇÒ Áöµµ °´Ã¼
+			});
+			
+			
+			<%
+		}		
+		
+		%>
+		
+		
+		<% for(int i=0; i<gpsal.size(); i++){ %>
+		
+		
+		var customOverlay = new kakao.maps.CustomOverlay({
+			map: map,
+			content: '<div style="padding:0 5px;background:#fff;"><%=gpsal.get(i).getHm_id()%></div>', 
+			position: new kakao.maps.LatLng(<%=gpsal.get(i).getLatitude()%>,<%=gpsal.get(i).getLongitude()%>), // Ä¿½ºÅÒ ¿À¹ö·¹ÀÌ¸¦ Ç¥½ÃÇÒ ÁÂÇ¥
+			xAnchor: 0.5, // ÄÁÅÙÃ÷ÀÇ x À§Ä¡
+			yAnchor: 0 // ÄÁÅÙÃ÷ÀÇ y À§Ä¡
+		});
+		
+
+		<%
+	}
+	
+	
+	%>
+		
+		
+
+
+	</script>
+
+
+
+
+
+
+
 
 	<!-- Footer -->
+
 	<footer class="footer">
 		<div class="container">
 		
@@ -177,8 +244,8 @@
 						</div>
 
 						<p class="footer_about_text">
-							ì•±ê³¼ ì›¹ì„ í†µí•œ 
-							<br>ë…¸ë™ì í†µí•© ì•ˆì „ ê´€ë¦¬ ì‹œìŠ¤í…œ
+							¾Û°ú À¥À» ÅëÇÑ 
+							<br>³ëµ¿ÀÚ ÅëÇÕ ¾ÈÀü °ü¸® ½Ã½ºÅÛ
 							<br><h3>defendo</h3>
 						</p>
 
@@ -239,7 +306,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/greensock/animation.gsap.min.js"></script>
 <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>  -->
 <script src="plugins/easing/easing.js"></script>
 <script src="js/contact_custom.js"></script>
 
