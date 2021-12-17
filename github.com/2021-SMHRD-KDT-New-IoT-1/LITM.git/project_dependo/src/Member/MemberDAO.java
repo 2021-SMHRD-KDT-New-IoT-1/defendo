@@ -15,7 +15,8 @@ public class MemberDAO {
 	    PreparedStatement pstmt;
 	    ResultSet rs;
 	    int cnt;
-	  
+		boolean check;
+
 	 
 	    public void DBcon() {
 	         try {
@@ -99,6 +100,62 @@ public class MemberDAO {
 			
 			
 		}
+		
+		
+		public boolean idCheck(String id) {
+			
+
+			
+			
+			try {
+				DBcon();
+
+				String sql = "select worker_id FROM tbl_worker where worker_id=?";
+				
+
+				pstmt = con.prepareStatement(sql);
+
+				// 4. 바인드 변수 채워두기
+				pstmt.setString(1, id);
+				
+				// 5. sql문 실행 후 결과 처리
+				rs = pstmt.executeQuery();
+			
+				if (rs.next()) {
+					// 입력한 이메일을 사용할 수 없을때
+					
+					check =true;
+					
+
+				} else {
+					// 입력한 이메일을 사용할 수 있을때
+					
+					check=false; 
+					//초기값은 false라 안적어도 되는데 직관적으로 보기 편하게
+				}
+				
+
+			} catch (Exception e) {
+				
+				System.out.println("로그인실패");
+				e.printStackTrace();
+				
+			} finally {
+
+				DBclose();
+
+			}
+			
+			return check;
+			
+		
+			
+		}
+		
+			
+			
+		
+		
 		
 	
 		public void StartTime(String worker_id,String start_time,String att_type) {

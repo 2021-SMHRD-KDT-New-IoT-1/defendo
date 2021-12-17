@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,17 +26,17 @@
             </svg>
            <span class="hidden">id</span>
          </label>
-         <input autocomplete="username" id="username" type="text" name="id" class="form__input" placeholder="ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”" required="required">
+         <input autocomplete="username" id="username" type="text" name="id" class="form__input" placeholder="¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä" required="required">
        </div> 
 
 
 
        <div class="form__field">
-         <input type="button" value="ID Check" onclick="idCheck()" required="required" >
+         <input type="button" value="ID Check" onclick="idCheck();" required="required" >
         
        </div>
           <div class="form__field">
-         <span id="sp_result"></span>
+         <span id="sp_result">¾ÆÀÌµğ Áßº¹Ã¼Å©¸¦ ÇØÁÖ¼¼¿ä!</span>
        </div>
        
 
@@ -45,7 +47,7 @@
             </svg>
            <span class="hidden">pw</span>
          </label>
-         <input id="login__password" type="password" name="password" class="form__input" placeholder="ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”" required>
+         <input id="login__password" type="password" name="password" class="form__input" placeholder="ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä" required>
        </div>
  
        <div class="form__field">
@@ -55,7 +57,7 @@
             </svg>
            <span class="hidden">name</span>
          </label>
-         <input autocomplete="username" id="login__username" type="text" name="name" class="form__input" placeholder="ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”" required>
+         <input autocomplete="username" id="login__username" type="text" name="name" class="form__input" placeholder="ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä" required>
        </div>
 
        <div class="form__field">
@@ -65,7 +67,7 @@
             </svg>
            <span class="hidden">tel</span>
          </label>
-         <input autocomplete="username" id="login__username" type="text" name="tel" class="form__input" placeholder="ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”" required>
+         <input autocomplete="username" id="login__username" type="text" name="tel" class="form__input" placeholder="ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä" required>
        </div>
 
        <div class="form__field">
@@ -75,13 +77,13 @@
             </svg>
            <span class="hidden">dept</span>
          </label>
-         <input autocomplete="username" id="login__username" type="text" name="dept" class="form__input" placeholder="ì†Œì†ì„ ì…ë ¥í•˜ì„¸ìš”" required>
+         <input autocomplete="username" id="login__username" type="text" name="dept" class="form__input" placeholder="¼Ò¼ÓÀ» ÀÔ·ÂÇÏ¼¼¿ä" required>
        </div>
 
 
-       <!-- ì²´í¬ë°•ìŠ¤ -->
+       <!-- Ã¼Å©¹Ú½º -->
        <div class="container">
-        <label for="cbtest" id="check_manager">ê´€ë¦¬ì ì²´í¬</label>
+        <label for="cbtest" id="check_manager">°ü¸®ÀÚ Ã¼Å©</label>
         <input type="checkbox" id="cbtest" name="check_manager" value="Y"/>
         <label for="cbtest" class="check-box" ></label> 
        </div>
@@ -96,7 +98,7 @@
         <svg class="icon">
          <use xlink:href="#icon-arrow-right"></use>
        </svg>
-       <a href="Login.html">ë¡œê·¸ì¸</a> 
+       <a href="Login.html">·Î±×ÀÎ</a> 
       </p>
 
       <p class="text--center">
@@ -104,7 +106,7 @@
         <svg class="icon">
          <use xlink:href="#icon-arrow-right"></use>
        </svg>
-       <a href="index_before.html">ë©”ì¸í™”ë©´ìœ¼ë¡œ</a>
+       <a href="index_before.html">¸ŞÀÎÈ­¸éÀ¸·Î</a>
       </p>
  
    </div>
@@ -115,31 +117,31 @@
 		var input = document.getElementById("username");
 		
 		$.ajax({
-			type : "post", // ë°ì´í„° ì „ì†¡(ìš”ì²­) ë°©ì‹
-			data : {"id": input.value}, // ì „ì†¡í•˜ëŠ” ë°ì´í„°
-			url : "idCheck", // ë°ì´í„°ë¥¼ ì „ì†¡í•˜ëŠ” (ìš”ì²­í•˜ëŠ”) ì„œí¼í˜ì´ì§€ url
-			dataType : "text", // ì‘ë‹µ ë°ì´í„°ì˜ í˜•ì‹
-			success : function(data) { //í†µì‹  ì„±ê³µ
+			type : "post", // µ¥ÀÌÅÍ Àü¼Û(¿äÃ») ¹æ½Ä
+			data : {"id": input.value}, // Àü¼ÛÇÏ´Â µ¥ÀÌÅÍ
+			url : "idCheck", // µ¥ÀÌÅÍ¸¦ Àü¼ÛÇÏ´Â (¿äÃ»ÇÏ´Â) ¼­ÆÛÆäÀÌÁö url
+			dataType : "text", // ÀÀ´ä µ¥ÀÌÅÍÀÇ Çü½Ä
+			success : function(data) { //Åë½Å ¼º°ø
 				
 				var sp_result = document.getElementById("sp_result");
 
 				
 				if(data=="true"){
 						
-					sp_result.innerText = "ì‚¬ìš©ë¶ˆê°€ëŠ¥í•œ ì•„ì´ë””";
+					sp_result.innerText = "»ç¿ëºÒ°¡´ÉÇÑ ¾ÆÀÌµğ";
 			
-					alert("ì‚¬ìš©ë¶ˆê°€ëŠ¥í•œ ì•„ì´ë””");
+					alert("»ç¿ëºÒ°¡´ÉÇÑ ¾ÆÀÌµğ");
 				}else{
 					
-					sp_result.innerText = "ì‚¬ìš©ê°€ëŠ¥í•œ ì•„ì´ë””";
+					sp_result.innerText = "»ç¿ë°¡´ÉÇÑ ¾ÆÀÌµğ";
 			
-					alert("ì‚¬ìš©ê°€ëŠ¥í•œ ì•„ì´ë””");
+					alert("»ç¿ë°¡´ÉÇÑ ¾ÆÀÌµğ");
 				}
 				
 				
 			}, 
-			error : function () { // í†µì‹  ì‹¤íŒ¨
-				alert("í†µì‹ ì‹¤íŒ¨")
+			error : function () { // Åë½Å ½ÇÆĞ
+				alert("Åë½Å½ÇÆĞ")
 			}
 								
 		});
@@ -170,7 +172,7 @@
      </symbol>
    </svg>
  
-<!-- iconì„ svgì„ ì´ìš©í•¨
+<!-- iconÀ» svgÀ» ÀÌ¿ëÇÔ
        -->
   
  </body>
