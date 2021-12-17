@@ -20,6 +20,7 @@ public class Login extends HttpServlet {
 		
 		String id =request.getParameter("id");
 		String pw = request.getParameter("password");
+        
 		
 		if(id.equals("admin")&&pw.equals("admin")) {
 			
@@ -27,11 +28,11 @@ public class Login extends HttpServlet {
 			
 			session.setAttribute("member", id);
 			
-			response.sendRedirect("http://localhost:8085/project_dependo/defendo/index_after.jsp");
+			response.sendRedirect("./defendo/index_after.jsp");
 			
 		}else {
 			
-			response.sendRedirect("http://localhost:8085/project_dependo/defendo/index_before.jsp");
+			response.sendRedirect("./defendo/index_before.jsp");
 			
 			
 		}
