@@ -5,23 +5,23 @@
  
  /* config.css */
  
- /* 문서트리의 루트 요소, 
-   html선택자보다는 root가 명시도가 더 낮다 
-   전역 css변수 선어에 유용*/
+ /* 臾몄꽌�듃由ъ쓽 猷⑦듃 �슂�냼, 
+   html�꽑�깮�옄蹂대떎�뒗 root媛� 紐낆떆�룄媛� �뜑 �궙�떎 
+   �쟾�뿭 css蹂��닔 �꽑�뼱�뿉 �쑀�슜*/
  :root {
    --baseColor: #606468;
  }
  
  /* helpers/align.css */
  
- .align { /* body태그 */
+ .align { /* body�깭洹� */
    display: grid;
-   /* flex는 한 방향 레이아웃 시스템(1차원)
-       grid는 두 방향(가로-세로)레이아웃 시스템(2차원) */
+   /* flex�뒗 �븳 諛⑺뼢 �젅�씠�븘�썐 �떆�뒪�뀥(1李⑥썝)
+       grid�뒗 �몢 諛⑺뼢(媛�濡�-�꽭濡�)�젅�씠�븘�썐 �떆�뒪�뀥(2李⑥썝) */
    place-items: center;
  }
  
- .grid { /* div class명 */
+ .grid { /* div class紐� */
    inline-size: 90%;
    margin-inline: auto;
    max-inline-size: 20rem;
@@ -161,11 +161,11 @@
    --loginLabelBackgroundColor: #212121;
  
    --loginSubmitBackgroundColor: #ffb606;
-   --loginSubmitColor: #1a1a1a;
+   --loginSubmitColor: ;
    --loginSubmitHoverBackgroundColor: #ffb606;
 
    --loginButtonBackgroundColor: #ffb606;
-   --loginButtonColor: #1a1a1a;
+   --loginButtonColor: ;
    --loginButtonHoverBackgroundColor: #ffb606;
  }
  
@@ -230,7 +230,7 @@
 
 
 
-/* 체크박스 */
+/* 泥댄겕諛뺤뒪 */
 
 .container {
   box-sizing: border-box;

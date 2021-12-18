@@ -683,10 +683,7 @@ section
 	padding-top: 117px;
 	padding-bottom: 117px;
 }
-.section_title
-{
 
-}
 .section_title h1
 {
 	display: block;
@@ -718,8 +715,8 @@ section
 .elements
 {
 	width: 100%;
-	padding-top: 109px;
-	padding-bottom: 106px;
+	padding-top: 106px;
+	padding-bottom: 117px;
 }
 .elements_title
 {
@@ -757,12 +754,12 @@ section
 
 
 /*********************************
-9. Footer
+12. Footer
 *********************************/
-
 .footer
 {
 	width: 100%;
+	padding-top: 86px;
 	background: #1a1a1a;
 }
 .footer .section_title h1
@@ -770,8 +767,86 @@ section
 	color: #FFFFFF;
 }
 
+
 /*********************************
-9.1 Footer Copyright
+12.2 Footer Content
+*********************************/
+
+.footer_content 
+{
+	padding-top: 80px;
+	padding-bottom: 83px;
+	border-bottom: solid 2px #4d4e4e;
+}
+.footer_content .logo_container
+{
+	padding-left: 0px;
+}
+.footer_content .logo span
+{
+	color: #FFFFFF;
+}
+.footer_about_text
+{
+	margin-top: 24px;
+	margin-bottom: 0px;
+	padding-right: 20px;
+}
+.footer_column_title
+{
+	font-size: 18px;
+	font-weight: 500;
+	color: #FFFFFF;
+	padding-top: 15px;
+}
+.footer_column_content
+{
+	margin-top: 32px;
+}
+.footer_list_item
+{
+	margin-bottom: 11px;
+}
+.footer_list_item a
+{
+	font-size: 14px;
+	color: #a5a5a5;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.footer_list_item a:hover
+{
+	color: #ffb606;
+}
+.footer_contact_item
+{
+	font-size: 14px;
+	font-weight: 400;
+	color: #a5a5a5;
+	margin-bottom: 22px;
+}
+.footer_contact_item:last-child
+{
+	margin-bottom: 0px;
+}
+.footer_contact_icon
+{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.footer_contact_icon img
+{
+	width: 100%;
+}
+
+/*********************************
+12.3 Footer Copyright
 *********************************/
 
 .footer_bar
