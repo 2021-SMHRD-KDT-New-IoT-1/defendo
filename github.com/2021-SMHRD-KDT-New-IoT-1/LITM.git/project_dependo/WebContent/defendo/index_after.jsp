@@ -62,21 +62,22 @@
          <nav class="main_nav_container">
             <div class="main_nav">
                <ul class="main_nav_list">
-               		<% if(id.equals("admin")){	%> 
+               		<% if("admin".equals(id)){%> 
                		
                			
                	  <li class="main_nav_item"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;"><%=id %>님 환영합니다.</span></a></li>                 
                	  <li class="main_nav_item"><a href="All_Worker.html"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">직원 통합 관리</span></a></li>                 
                   <li class="main_nav_item"><a href="Location.jsp"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">직원 위치 확인</span></a></li>
                   <li class="main_nav_item"><a href="machine.html"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">기기등록</span></a></li>
-             <% 
-               		}else{%>
+                  <li class="main_nav_item"><a href="../Logout"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">로그아웃</span></a></li>
+            
+            
+             <% }else{%>
                		<li class="main_nav_item"><span style="font-family: 'SpoqaHanSansNeo-Medium' !important; font-size:18px;">관리자 페이지입니다.</span></a></li>                 
                	  
                		<%}%>
                		
-               		
-               		
+            
                    </ul>
             </div>
          </nav>

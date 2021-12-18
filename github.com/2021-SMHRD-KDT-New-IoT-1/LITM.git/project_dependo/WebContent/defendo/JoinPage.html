@@ -5,6 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" type="text/css" href="styles/JoinPage_style.css">
+   <script src="js/jquery-3.2.1.min.js"></script>
 </head>
 
 <body class="align">
@@ -110,42 +111,42 @@
    </div>
 
   <script>
-	function idCheck() {
-		
-		var input = document.getElementById("username");
-		
-		$.ajax({
-			type : "post", // 데이터 전송(요청) 방식
-			data : {"id": input.value}, // 전송하는 데이터
-			url : "idCheck", // 데이터를 전송하는 (요청하는) 서퍼페이지 url
-			dataType : "text", // 응답 데이터의 형식
-			success : function(data) { //통신 성공
-				
-				var sp_result = document.getElementById("sp_result");
+   function idCheck() {
+      
+      var input = document.getElementById("username");
+      
+      $.ajax({
+         type : "post", // 데이터 전송(요청) 방식
+         data : {"id": input.value}, // 전송하는 데이터
+         url : "../idCheck", // 데이터를 전송하는 (요청하는) 서퍼페이지 url
+         dataType : "text", // 응답 데이터의 형식
+         success : function(data) { //통신 성공
+            
+            var sp_result = document.getElementById("sp_result");
 
-				
-				if(data=="true"){
-						
-					sp_result.innerText = "사용불가능한 아이디";
-			
-					alert("사용불가능한 아이디");
-				}else{
-					
-					sp_result.innerText = "사용가능한 아이디";
-			
-					alert("사용가능한 아이디");
-				}
-				
-				
-			}, 
-			error : function () { // 통신 실패
-				alert("통신실패")
-			}
-								
-		});
+            
+            if(data=="true"){
+                  
+               sp_result.innerText = "사용불가능한 아이디";
+         
+               alert("사용불가능한 아이디");
+            }else{
+               
+               sp_result.innerText = "사용가능한 아이디";
+         
+               alert("사용가능한 아이디");
+            }
+            
+            
+         }, 
+         error : function () { // 통신 실패
+            alert("통신실패")
+         }
+                        
+      });
 
-		}
-	
+      }
+   
   </script>
   
  
