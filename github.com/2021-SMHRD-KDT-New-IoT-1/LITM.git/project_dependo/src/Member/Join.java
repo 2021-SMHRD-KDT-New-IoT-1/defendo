@@ -27,7 +27,7 @@ public class Join extends HttpServlet {
       String dept = request.getParameter("dept");
       String check_manager = request.getParameter("check_manager");
       
-      System.out.println(id+"/"+password+"/"+tel+"/"+dept+"/"+check_manager);
+      System.out.println(id+"/"+password+"/"+name+"/"+tel+"/"+dept+"/"+check_manager);
 
       
       MemberDAO dao= new MemberDAO();
@@ -38,10 +38,10 @@ public class Join extends HttpServlet {
       
       if(cnt > 0) {
          System.out.println("회원가입성공");
-         response.sendRedirect("http://localhost:8085/project_dependo/defendo/index_before.jsp");
+         response.sendRedirect("./defendo/index_before.html");
       }else {
          System.out.println("회원가입실패");
-         response.sendRedirect("http://localhost:8085/project_dependo/defendo/index_before.jsp");
+         response.sendRedirect("./defendo/index_before.html");
       }
       
       

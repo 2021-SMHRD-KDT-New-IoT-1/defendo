@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class impact_sensorDAO {
+public class SensorDAO {
 	
 	private Connection conn;
 	private PreparedStatement psmt;
@@ -48,18 +48,21 @@ public class impact_sensorDAO {
 	}
 	
 	
-	public void getImpactSensor(int hm_impact_sensor, String hm_id ) {
+	public void UpdateSensor(String hm_id , int hm_impact_sensor,int gas_sensor, float latitude,float longitude ) {
 		
 		
 		conn();
 
-		String sql = "update tbl_helmet set hm_impact_sensor =? where hm_id = ?";
+		String sql = "update tbl_helmet set hm_impact_sensor =?,HM_GAS_SENSOR=?,latitude=?,longitude=?  where hm_id = ?";
 		
 		int result = 0;
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, hm_impact_sensor);
-			psmt.setString(2, hm_id);
+			psmt.setInt(2, gas_sensor);
+			psmt.setFloat(3, latitude);
+			psmt.setFloat(4, longitude);
+			psmt.setString(5, hm_id);
 			System.out.println("psmt 준비완료");
 			result = psmt.executeUpdate();
 			System.out.println("update 실행");
@@ -71,10 +74,32 @@ public class impact_sensorDAO {
 		}
 		
 		
-		
-		
-		
 	}
+	
+	
+	public SensorVO getSensor() {
+		SensorVO vo = null;
+		conn();
+		System.out.println("디비 접속 성공  get sensor");
+		String sql = "select * from tbl_helmet";
+		try {
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				int mysensor = rs.getInt(1);
+				vo = new SensorVO(mysensor);
+			}
+			System.out.println("select 성공");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return vo;
+	}
+	
+	
 	
 	
 
